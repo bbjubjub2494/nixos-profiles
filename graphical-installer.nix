@@ -1,5 +1,3 @@
-{ config, lib, pkgs, ... }:
-
 # A customized NixOS installer image.
 # Features:
 #   - Fish shell with my preferred prompt.
@@ -15,33 +13,13 @@
       # reuse a config from NixOS
       <nixpkgs/nixos/modules/installer/cd-dvd/installation-cd-graphical-gnome.nix>
 
-      # Dependencies
-      ./common
+      ./installer-common.nix
 
-      # System Customization
       segments/boot-splash
-      segments/cli-utils
-      segments/pager
-      segments/fish
-
-      # enable SSH by default
-      segments/sshd
-
-      # Localization
-      segments/i18n
-      segments/custom-layout
 
       # Desktop Environment
       segments/fonts
       segments/x11
       segments/gnome3
     ];
-
-  services.rogue.enable = true;
-
-  services.openssh.permitRootLogin = lib.mkForce "prohibit-password";
-
-  users.users.root.openssh.authorizedKeys.keyFiles = [
-    config.lib.data.lourkeur.keys.ssh.nitrokey
-  ];
 }
