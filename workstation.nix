@@ -11,7 +11,6 @@
       segments/bootloader
       segments/filesystem-support
       segments/boot-splash
-      segments/wired-network
       segments/rescue-shell
 
       # System Customization
