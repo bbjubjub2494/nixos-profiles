@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 # My workstation setup with my preferences, user account, and favorite software properly set up.
 
 {
@@ -34,12 +32,11 @@
       segments/sound
 
       # Extra Daemons
+      segments/transmissiond
       segments/tord
       segments/sshd
 
       # Extra Hardware
       segments/usbblaster
     ];
-
-  services.transmission.enable = true;
 }
