@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   # support for lvm raid1
   boot.initrd.kernelModules = [ "dm-raid" ];

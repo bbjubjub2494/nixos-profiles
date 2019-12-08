@@ -1,5 +1,3 @@
-{ lib, pkgs, ... }:
-
 let
   nur-source = builtins.fetchTarball {
     url = "https://github.com/nix-community/nur-combined/archive/a9182c53221855ba3614c529e99b2dceea7329b8.tar.gz";

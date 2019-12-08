@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   services.xserver.extraLayouts.custom = {
     description = "my own custom layout";

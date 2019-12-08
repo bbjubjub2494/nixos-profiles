@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   # Select internationalisation properties.
   i18n = {

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   fonts.fonts = with pkgs; [ source-code-pro libertinus ];

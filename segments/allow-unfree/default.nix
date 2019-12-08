@@ -1,4 +1,3 @@
-{ config, pkgs, ... }:
 # currently a no-op, but could be used again in the future.
 
 {
