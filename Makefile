@@ -13,3 +13,7 @@ graphical-installer/%: NIXOS_CONFIG=$(PWD)/graphical-installer.nix
 	nix-build -o $@ '<nixpkgs/nixos>' -A $(target)
 %/instantiate: dummy
 	nix-instantiate --eval '<nixpkgs/nixos>' -A $(target)
+
+lint: dummy
+	find -name '*.nix' | xargs nix-linter -j \
+		| jq -r '"\(.file):\(.pos.spanBegin.sourceLine):\(.description)"'
