@@ -12,7 +12,7 @@ graphical-installer/%: NIXOS_CONFIG=$(PWD)/graphical-installer.nix
 %/build: dummy
 	nix-build -o $@ '<nixpkgs/nixos>' -A $(target)
 %/instantiate: dummy
-	nix-instantiate --eval '<nixpkgs/nixos>' -A $(target)
+	nix-instantiate --add-root $@ --indirect '<nixpkgs/nixos>' -A $(target)
 
 lint: dummy
 	find -name '*.nix' | xargs nix-linter -j \
