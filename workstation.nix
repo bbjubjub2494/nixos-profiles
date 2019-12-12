@@ -36,6 +36,9 @@
       segments/tord
       segments/sshd
 
+      # Containers
+      segments/torbox
+
       # Extra Hardware
       segments/usbblaster
     ];
