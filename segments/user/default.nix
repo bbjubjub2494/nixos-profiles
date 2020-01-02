@@ -14,6 +14,7 @@ in {
       "tor"
       "transmission"
       "audio"
+      "wireshark"
     ];
     openssh.authorizedKeys.keyFiles = [
       config.lib.data.lourkeur.keys.ssh.nitrokey

@@ -22,8 +22,9 @@
       segments/i18n
       segments/custom-layout
 
-      # Cryptography
+      # Programs
       segments/gnupg
+      segments/wireshark
 
       # Desktop Environment
       segments/fonts
