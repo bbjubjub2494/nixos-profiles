@@ -8,4 +8,12 @@
     sansSerif = lib.mkBefore [ "Libertinus Sans" ];
     serif = lib.mkBefore [ "Libertinus Serif" ];
   };
+
+  fonts.fontconfig.localConf = ''
+  <match target="font">
+    <edit name="fontfeatures" mode="append">
+      <string>onum on</string>
+    </edit>
+  </match>
+  '';
 }
