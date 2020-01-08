@@ -37,10 +37,17 @@
       segments/tord
       segments/sshd
 
-      # Containers
-      segments/torbox
-
       # Extra Hardware
       segments/usbblaster
     ];
+
+  nesting.clone = [
+    {
+      imports = [
+        # Containers
+        segments/torbox
+      ];
+      boot.loader.grub.configurationName = "Torbox";
+    }
+  ];
 }

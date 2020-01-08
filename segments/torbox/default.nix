@@ -4,6 +4,8 @@ let
 in
 {
   containers.torbox = {
+    autoStart = true;
+
     privateNetwork = true;
     inherit hostAddress localAddress;
 
@@ -43,4 +45,10 @@ in
   services.tor.client.socksListenAddressFaster = "${hostAddress}:9063";
 
   networking.firewall.interfaces.ve-torbox.allowedTCPPorts = [ 9050 9063 ];
+
+  # Tor needs $hostAddress to be up in order to start properly
+  systemd.services.tor = rec {
+    after = [ "container@torbox.service" ];
+    requisite = after;
+  };
 }

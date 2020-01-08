@@ -7,7 +7,5 @@
     controlSocket.enable = true;
   };
 
-  systemd.services.tor.wantedBy = lib.mkForce [];
-
   environment.systemPackages = with pkgs; [ nyx ];
 }
