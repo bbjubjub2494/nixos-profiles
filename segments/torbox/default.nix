@@ -9,10 +9,12 @@ in
     privateNetwork = true;
     inherit hostAddress localAddress;
 
-    config = {
+    config = { pkgs, ...}: {
       users.users.user = {
         isNormalUser = true;
         uid = 1001;  # should be the same as my user
+
+        packages = with pkgs; [ git firefox ];
       };
 
       services.mingetty.autologinUser = "user";
