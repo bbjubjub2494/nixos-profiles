@@ -14,4 +14,9 @@ in
   ];
 
   lib.data.lourkeur.keys.ssh.nitrokey = ./id_gpgcard.pub;
+
+  nix.binaryCachePublicKeys = [
+    "hadron:mXJ78W2bkR8Dw+AaN/5LpVLsmIjHu25FvNcY4fqx0ok"
+    "hadronsson:C7u1DgUTIl5eDf4O2RGuXGJ3VNUd4Fq2Yta2g1iRVOA="
+  ];
 }

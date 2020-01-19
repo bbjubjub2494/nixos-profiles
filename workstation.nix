@@ -32,7 +32,8 @@
       segments/gnome3
       segments/sound
 
-      # Extra Daemons
+      # Extra Daemons & Services
+      segments/sign-store-paths
       segments/transmissiond
       segments/tord
       segments/sshd
