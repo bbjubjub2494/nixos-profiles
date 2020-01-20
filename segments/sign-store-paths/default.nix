@@ -3,7 +3,7 @@
 # sign every built derivation with a machine-local key.
 # generate with
 # sudo nix-store --generate-binary-cache-key $(hostname) /etc/nix/key.{private,public}
-# and add public key in the common segment
+# and add public key in the trust-workstations segment
 
 let
   postBuildHook = pkgs.writers.writeDash "sign-paths" ''

@@ -9,4 +9,9 @@
       publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHdhemK8JsrQLCZgKwF/9XYoeHKxFZP9KwOLP76cuuFJ";
     };
   };
+
+  nix.binaryCachePublicKeys = [
+    "hadron:mXJ78W2bkR8Dw+AaN/5LpVLsmIjHu25FvNcY4fqx0ok"
+    "hadronsson:C7u1DgUTIl5eDf4O2RGuXGJ3VNUd4Fq2Yta2g1iRVOA="
+  ];
 }
