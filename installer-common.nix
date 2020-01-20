@@ -13,6 +13,9 @@
       # enable SSH by default
       segments/sshd
 
+      # host keys
+      segments/trust-workstations
+
       # Localization
       segments/i18n
       segments/custom-layout
