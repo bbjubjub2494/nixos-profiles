@@ -17,3 +17,6 @@ graphical-installer/%: NIXOS_CONFIG=$(PWD)/graphical-installer.nix
 lint:
 	find -name '*.nix' | xargs nix-linter -j \
 		| jq -r '"\(.file):\(.pos.spanBegin.sourceLine):\(.description)"'
+
+install:
+	ln -sfT $(realpath .) /etc/nixos/profiles
