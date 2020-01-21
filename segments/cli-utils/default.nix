@@ -1,5 +1,7 @@
 { pkgs, ... }:
 
+# Make some CLI utility programs always available.
+
 {
   imports =
     [

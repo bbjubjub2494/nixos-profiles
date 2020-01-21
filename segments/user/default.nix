@@ -1,5 +1,7 @@
 { config, ... }:
 
+# My account.
+
 let
   username = "louis";
   uid = 1001;

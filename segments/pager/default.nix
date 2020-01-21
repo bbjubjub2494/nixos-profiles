@@ -1,5 +1,7 @@
 { pkgs, ... }:
 
+# Use less as a universal viz tool.
+
 {
   environment.systemPackages = with pkgs; [ less ];
   environment.variables = {

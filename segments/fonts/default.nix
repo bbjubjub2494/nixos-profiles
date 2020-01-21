@@ -1,5 +1,7 @@
 { lib, pkgs, ... }:
 
+# Configure the GUI to use visually pleasing fonts.
+
 {
   fonts.fonts = with pkgs; [ source-code-pro libertinus ];
 
@@ -9,6 +11,7 @@
     serif = lib.mkBefore [ "Libertinus Serif" ];
   };
 
+  # lowercase numerals
   fonts.fontconfig.localConf = ''
   <match target="font">
     <edit name="fontfeatures" mode="append">

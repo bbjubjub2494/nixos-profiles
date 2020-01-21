@@ -1,3 +1,5 @@
+# A virtual container than can run X applications and cant access the Internet except thru Tor.
+
 let
   hostAddress = "10.0.1.1";
   localAddress = "10.0.1.2";

@@ -1,5 +1,7 @@
 { pkgs, ... }:
 
+# The Tor Daemon
+
 {
   services.tor = {
     enable = true;

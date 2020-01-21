@@ -1,3 +1,5 @@
+# Enable and configure the friendly interactive shell.
+
 {
   programs.fish = {
     enable = true;

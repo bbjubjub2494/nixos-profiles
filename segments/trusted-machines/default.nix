@@ -1,3 +1,5 @@
+# Public keys of trustworthy machines that I control.
+
 {
   programs.ssh.knownHosts = {
     hadron = {

@@ -1,3 +1,5 @@
+# Language & Region Settings
+
 {
   # Select internationalisation properties.
   i18n = {

@@ -1,5 +1,7 @@
 { pkgs, ... }:
 
+# Enable the eponymous Desktop Environment.
+
 {
   services.xserver.desktopManager.gnome3.enable = true;
   environment.gnome3.excludePackages = [
