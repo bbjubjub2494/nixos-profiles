@@ -3,7 +3,7 @@
 {
   imports = [
       # Dependencies
-      ./common
+      segments/common
 
       # System Customization
       segments/cli-utils

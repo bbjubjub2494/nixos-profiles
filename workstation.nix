@@ -3,7 +3,7 @@
 {
   imports = [
       # Dependencies
-      ./common
+      segments/common
 
       # Boot-critical Segments
       segments/bootloader
