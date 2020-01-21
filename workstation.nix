@@ -17,7 +17,7 @@
       segments/autojump
       segments/user
       segments/fish
-      segments/trust-workstations
+      segments/trusted-machines
 
       # Localization
       segments/i18n

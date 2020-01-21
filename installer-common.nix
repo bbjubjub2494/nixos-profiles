@@ -14,7 +14,7 @@
       segments/sshd
 
       # host keys
-      segments/trust-workstations
+      segments/trusted-machines
 
       # Localization
       segments/i18n
