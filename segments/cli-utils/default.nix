@@ -5,6 +5,7 @@
 {
   environment.systemPackages = with pkgs; [
     bind  # dig
+    jwhois
     file
     htop
     libarchive  # for bsdtar et al.
