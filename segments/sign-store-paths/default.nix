@@ -9,7 +9,6 @@ let
   postBuildHook = pkgs.writers.writeDash "sign-paths" ''
     set -f  # disable globbing
     export IFS=' '
-    echo "Signing paths" $OUT_PATHS
     nix sign-paths --key-file /etc/nix/key.private $OUT_PATHS
   '';
 in
