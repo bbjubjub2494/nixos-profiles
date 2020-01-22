@@ -17,6 +17,7 @@ in {
       "transmission"
       "audio"
       "wireshark"
+      "networkmanager"
     ];
     openssh.authorizedKeys.keyFiles = [
       config.lib.data.lourkeur.keys.ssh.nitrokey
