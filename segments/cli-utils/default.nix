@@ -12,6 +12,12 @@
     tree
   ];
 
+  environment.shellAliases = {
+    c = "bsdtar --create  -f -";
+    t = "bsdtar --list    -f -";
+    x = "bsdtar --extract -f -";
+  };
+
   environment.variables.EDITOR = "nvim";
 
   services.atd.enable = true;
