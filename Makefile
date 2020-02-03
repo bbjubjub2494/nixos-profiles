@@ -15,7 +15,7 @@ graphical-installer/%: NIXOS_CONFIG=$(PWD)/graphical-installer.nix
 	nix-instantiate --add-root $@ --indirect '<nixpkgs/nixos>' -A $(target)
 
 lint:
-	find -name '*.nix' | xargs nix-linter -j \
+	@find -name '*.nix' | xargs nix-linter -j \
 		| jq -r '"\(.file):\(.pos.spanBegin.sourceLine):\(.description)"'
 
 install:
