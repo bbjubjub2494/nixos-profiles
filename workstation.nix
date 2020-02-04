@@ -34,6 +34,7 @@
       segments/sound
 
       # Extra Daemons & Services
+      segments/cross-compilation
       segments/sign-store-paths
       segments/transmissiond
       segments/tord
