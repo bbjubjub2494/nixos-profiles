@@ -5,9 +5,13 @@
       # Dependencies
       segments/common
 
+      # Booting process
+      segments/rescue-shell
+
       # System Customization
       segments/cli-utils
       segments/pager
+      segments/autojump
       segments/fish
 
       # enable SSH by default
