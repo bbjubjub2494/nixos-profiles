@@ -39,6 +39,7 @@
       segments/transmissiond
       segments/tord
       segments/sshd
+      segments/jdk
 
       # Extra Hardware
       segments/usbblaster
