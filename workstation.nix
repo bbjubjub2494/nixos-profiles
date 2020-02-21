@@ -39,6 +39,7 @@
       segments/transmissiond
       segments/tord
       segments/sshd
+      segments/lxd
       segments/jdk
 
       # Extra Hardware
