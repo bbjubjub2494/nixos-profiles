@@ -29,6 +29,8 @@ in {
 
   services.mingetty.autologinUser = username;
 
-  services.xserver.displayManager.auto.enable = true;
-  services.xserver.displayManager.auto.user = username;
+  services.xserver.displayManager.lightdm.autoLogin = {
+    enable = true;
+    user = username;
+  };
 }

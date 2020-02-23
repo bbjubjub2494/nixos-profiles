@@ -4,8 +4,8 @@
 
 {
   services.xserver.desktopManager.gnome3.enable = true;
+  programs.geary.enable = false;  # doesn't build for some reason
   environment.gnome3.excludePackages = with pkgs; [
-    gnome3.geary  # doesn't build for some reason
     gnome3.epiphany  # I don't use
   ];
 
@@ -15,5 +15,5 @@
     gnome3.gnome-tweaks
   ];
 
-  services.xserver.desktopManager.default = "gnome";
+  services.xserver.displayManager.defaultSession = "gnome";
 }
