@@ -3,6 +3,8 @@
 let
   hostAddress = "10.0.1.1";
   localAddress = "10.0.1.2";
+  torsocksUrl = "socks5h://${hostAddress}:9050";
+  privoxyUrl = "http://${hostAddress}:8118";
 in
 {
   containers.torbox = {
@@ -21,12 +23,15 @@ in
 
       services.mingetty.autologinUser = "user";
 
-      networking.proxy.default = "socks5h://${hostAddress}:9063";
+      networking.proxy = rec {
+        default = torsocksUrl;
+        httpProxy = privoxyUrl;
+        httpsProxy = privoxyUrl;
+      };
 
       services.tor.torsocks = {
         enable = true;
         server = "${hostAddress}:9050";
-        fasterServer = "${hostAddress}:9063";
       };
     };
 
@@ -46,13 +51,18 @@ in
   };
 
   services.tor.client.socksListenAddress = "${hostAddress}:9050";
-  services.tor.client.socksListenAddressFaster = "${hostAddress}:9063";
+  services.privoxy.listenAddress = "${hostAddress}:8118";
 
-  networking.firewall.interfaces.ve-torbox.allowedTCPPorts = [ 9050 9063 ];
+  networking.firewall.interfaces.ve-torbox.allowedTCPPorts = [ 8118 9050 ];
 
-  # Tor needs $hostAddress to be up in order to start properly
-  systemd.services.tor = rec {
-    after = [ "container@torbox.service" ];
-    requisite = after;
-  };
+  # Tor and privoxy needs $hostAddress to be up in order to start properly
+  systemd.services =
+    let common = rec {
+      after = [ "container@torbox.service" ];
+      requisite = after;
+    };
+    in {
+      tor = common;
+      privoxy = common;
+    };
 }
