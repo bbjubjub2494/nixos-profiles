@@ -42,11 +42,6 @@ in
         mountPoint = hostPath;
         isReadOnly = true;
       };
-      Xauthority = {
-        hostPath = "/home/louis/.Xauthority";
-        mountPoint = "/home/user/.Xauthority";
-        isReadOnly = true;
-      };
       home = {
         hostPath = "/home/louis/torbox";
         mountPoint = "/home/user";
