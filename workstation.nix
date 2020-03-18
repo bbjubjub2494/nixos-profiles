@@ -37,6 +37,7 @@
       segments/cross-compilation
       segments/sign-store-paths
       segments/transmissiond
+      segments/firewall
       segments/tord
       segments/sshd
       segments/lxd
