@@ -25,6 +25,7 @@
 
       # Programs
       segments/gnupg
+      segments/captive-browser
       segments/wireshark
 
       # Desktop Environment
