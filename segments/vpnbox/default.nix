@@ -12,8 +12,6 @@ let
 in
 {
   containers.vpnbox = {
-    autoStart = true;
-
     privateNetwork = true;
     enableTun = true;  # needed for OpenVPN
     inherit hostAddress localAddress;

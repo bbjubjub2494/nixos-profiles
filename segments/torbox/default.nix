@@ -8,8 +8,6 @@ let
 in
 {
   containers.torbox = {
-    autoStart = true;
-
     privateNetwork = true;
     inherit hostAddress localAddress;
 
