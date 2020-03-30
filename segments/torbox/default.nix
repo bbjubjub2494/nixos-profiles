@@ -21,6 +21,17 @@ in
 
       services.mingetty.autologinUser = "user";
 
+      # to use:
+      # xpra attach tcp://torbox
+      # sudo nixos-container run torbox -- su user -lc 'DISPLAY=:0 firefox'
+      services.xserver.enable = true;
+      services.xserver.displayManager.xpra = {
+        enable = true;
+        auth = "allow";
+        bindTcp = "${localAddress}:14500";
+      };
+      networking.firewall.allowedTCPPorts = [ 14500 ];
+
       networking.proxy = rec {
         default = torsocksUrl;
         httpProxy = privoxyUrl;
@@ -33,13 +44,8 @@ in
       };
     };
 
-    # need to xhost and stuff
+    # host file-sharing & such
     bindMounts = {
-      x11_sockets = rec {
-        hostPath = "/tmp/.X11-unix";
-        mountPoint = hostPath;
-        isReadOnly = true;
-      };
       home = {
         hostPath = "/home/louis/torbox";
         mountPoint = "/home/user";
