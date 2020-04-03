@@ -45,7 +45,6 @@
 
       # Containers
       segments/torbox
-      segments/vpnbox
 
       # Extra Hardware
       segments/usbblaster
