@@ -8,4 +8,6 @@
     ./containers/tor-gateway.nix
     ./containers/vpn-gateway.nix
   ];
+
+  environment.systemPackages = [ pkgs.xpra ];
 }
