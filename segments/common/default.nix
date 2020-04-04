@@ -21,6 +21,5 @@ rec {
   };
 
   imports = with lib.modules; [
-    gnome3-fix-extra-layouts
   ];
 }
