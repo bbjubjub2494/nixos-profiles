@@ -42,7 +42,8 @@ in
       # VPN routes mess with privoxy's ability to respond to torbox and the like.
       networking.interfaces.eth0.ipv4.routes = [{
         address = "10.0.0.0";
-        prefixLength = 24;
+        prefixLength = 16;
+        via = hostAddress;
       }];
     };
   };
