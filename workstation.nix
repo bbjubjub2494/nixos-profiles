@@ -39,6 +39,7 @@
       segments/sign-store-paths
       segments/transmissiond
       segments/firewall
+      segments/docker
       segments/sshd
       segments/lxd
       segments/jdk
