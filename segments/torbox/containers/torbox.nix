@@ -19,14 +19,14 @@ in
         isNormalUser = true;
         uid = 1001;  # should be the same as my user
 
-        packages = with pkgs; [ git firefox ];
+        packages = with pkgs; [ git brave ];
       };
 
       services.mingetty.autologinUser = "user";
 
       # to use:
       # xpra attach tcp://torbox
-      # sudo nixos-container run torbox -- su user -lc 'DISPLAY=:0 firefox'
+      # sudo nixos-container run torbox -- su user -lc 'DISPLAY=:0 brave'
       services.xserver.enable = true;
       services.xserver.displayManager.xpra = {
         enable = true;
