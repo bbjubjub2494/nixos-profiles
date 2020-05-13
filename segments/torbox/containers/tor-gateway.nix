@@ -22,7 +22,7 @@ in
       };
       services.privoxy.listenAddress = "0.0.0.0:8118";
 
-      # environment.systemPackages = with pkgs; [ nyx ];
+      environment.systemPackages = with pkgs; [ nyx ];
 
       networking.firewall.allowedTCPPorts = forwardPorts;
     };
