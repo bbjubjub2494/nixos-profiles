@@ -16,6 +16,7 @@ in
       services.tor = {
         enable = true;
         client.enable = true;
+        client.socksListenAddress = "0.0.0.0:9050";
         client.privoxy.enable = true;
         controlSocket.enable = true;
       };
