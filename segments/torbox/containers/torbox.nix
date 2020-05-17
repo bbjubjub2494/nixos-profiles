@@ -21,22 +21,14 @@ in
         isNormalUser = true;
         uid = 1001;  # should be the same as my user
 
-        packages = with pkgs; [ git brave ];
+        packages = with pkgs; [ xpra git brave ];
       };
 
       services.mingetty.autologinUser = "user";
 
+      services.sshd.enable = true;
+
       nixpkgs.overlays = [ config.lib.overlays.patch-xpra ];
-      # to use:
-      # xpra attach tcp://torbox
-      # sudo nixos-container run torbox -- su user -lc 'DISPLAY=:0 brave'
-      services.xserver.enable = true;
-      services.xserver.displayManager.xpra = {
-        enable = true;
-        auth = "allow";
-        bindTcp = "${localAddress}:14500";
-      };
-      networking.firewall.allowedTCPPorts = [ 14500 ];
 
       networking.proxy = rec {
         default = torsocksUrl;
