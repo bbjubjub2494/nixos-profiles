@@ -1,7 +1,7 @@
 let
   nur-source = builtins.fetchTarball {
-    url = "https://github.com/nix-community/nur-combined/archive/a3f6e1bd865c0cd6fc42327509486c66991bbaa8.tar.gz";
-    sha256 = "05f4rzhf8hm3nwqwr5qkjj2rx5yl2jkc8lxq3973cqrqcx2kzvfz";
+    url = "https://github.com/nix-community/nur-combined/archive/4588996d758e00f8654ca25aa9a0eb5473264843.tar.gz";
+    sha256 = "1l5h3crjvglynnz43bql8ickkfg4d5q0sa8ha1613dpp0d9g7d7n";
   };
   nur-no-pkgs = import nur-source { };
   nur.modules = builtins.mapAttrs (_: r: r.modules) nur-no-pkgs.repos;
@@ -17,6 +17,9 @@ rec {
         url = "https://raw.githubusercontent.com/xfix/nixpkgs/89f5dc24ed9b6aa15d8314b592184399081844ba/nixos/modules/services/networking/mullvad-vpn.nix";
         sha256 = "0jdhhck1x3r11db23xvl0ii51yp03rnvjbsqn034l48ga6glcics";
       };
+    };
+    overlays = {
+      inherit (nur.overlays.lourkeur) patch-xpra;
     };
   };
 

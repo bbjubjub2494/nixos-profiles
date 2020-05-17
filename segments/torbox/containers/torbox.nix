@@ -1,3 +1,5 @@
+{ config, ... }:
+
 let
   hostAddress = "10.0.1.1";
   localAddress = "10.0.1.2";
@@ -24,6 +26,7 @@ in
 
       services.mingetty.autologinUser = "user";
 
+      nixpkgs.overlays = [ config.lib.overlays.patch-xpra ];
       # to use:
       # xpra attach tcp://torbox
       # sudo nixos-container run torbox -- su user -lc 'DISPLAY=:0 brave'
