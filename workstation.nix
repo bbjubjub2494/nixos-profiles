@@ -24,6 +24,7 @@
       segments/custom-layout
 
       # Programs
+      segments/pass
       segments/gnupg
       segments/captive-browser
       segments/wireshark
