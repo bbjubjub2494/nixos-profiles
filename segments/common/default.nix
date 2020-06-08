@@ -1,7 +1,7 @@
 let
   nur-source = builtins.fetchTarball {
-    url = "https://github.com/nix-community/nur-combined/archive/3d73f2d3eb11f0dd7052cec3510c5d91303c3c29.tar.gz";
-    sha256 = "0frxvnszajnw2van6v7yd4vka41i2rabc7n87ck3gyn0ax5jvsam";
+    url = "https://github.com/nix-community/nur-combined/archive/df42aa53a51a37737f84fa9f94246c5aba32c90c.tar.gz";
+    sha256 = "12w603gpizfgczrkbzv4mkmhvjv3g4iqhqkhg3mdd9q42263ijgp";
   };
   nur-no-pkgs = import nur-source { };
   nur.modules = builtins.mapAttrs (_: r: r.modules) nur-no-pkgs.repos;
