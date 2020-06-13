@@ -50,5 +50,6 @@
 
       # Extra Hardware
       segments/usbblaster
+      segments/opencl/intel
     ];
 }
