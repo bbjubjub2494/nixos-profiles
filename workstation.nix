@@ -26,6 +26,7 @@
       # Programs
       segments/pass
       segments/gnupg
+      segments/keybase
       segments/captive-browser
       segments/wireshark
 
