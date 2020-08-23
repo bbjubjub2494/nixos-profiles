@@ -32,7 +32,11 @@ xkb_symbols "custom" {
     // Workman turns Caps Lock into backspace, undo
     replace key <CAPS> { [ Caps_Lock ] };
 
-    // make both alt keys Alt
-    // I manage accented characters another way
-    include "level3(ralt_alt)"
+    // Accents and special characters (FR/EN/DE)
+    key <AC01> { [ NoSymbol, NoSymbol, dead_diaeresis, dead_diaeresis ] };
+    key <AC02> { [ NoSymbol, NoSymbol, dead_circum,    dead_circum    ] };
+    key <AC03> { [ NoSymbol, NoSymbol, dead_grave,     dead_grave     ] };
+    key <AC04> { [ NoSymbol, NoSymbol, dead_acute,     dead_acute     ] };
+    key <AB04> { [ NoSymbol, NoSymbol, ccedilla,       Ccedilla       ] };
+    key <AD04> { [ NoSymbol, NoSymbol, oe,             OE             ] };
 };
