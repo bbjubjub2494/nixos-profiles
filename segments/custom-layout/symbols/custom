@@ -33,10 +33,13 @@ xkb_symbols "custom" {
     replace key <CAPS> { [ Caps_Lock ] };
 
     // Accents and special characters (FR/EN/DE)
-    key <AC01> { [ NoSymbol, NoSymbol, dead_diaeresis, dead_diaeresis ] };
-    key <AC02> { [ NoSymbol, NoSymbol, dead_circum,    dead_circum    ] };
-    key <AC03> { [ NoSymbol, NoSymbol, dead_grave,     dead_grave     ] };
-    key <AC04> { [ NoSymbol, NoSymbol, dead_acute,     dead_acute     ] };
-    key <AB04> { [ NoSymbol, NoSymbol, ccedilla,       Ccedilla       ] };
-    key <AD04> { [ NoSymbol, NoSymbol, oe,             OE             ] };
+    key <AC01> { [ NoSymbol, NoSymbol, dead_diaeresis,  dead_diaeresis  ] };
+    key <AC02> { [ NoSymbol, NoSymbol, dead_circumflex, dead_circumflex ] };
+    key <AC03> { [ NoSymbol, NoSymbol, dead_grave,      dead_grave      ] };
+    key <AC04> { [ NoSymbol, NoSymbol, dead_acute,      dead_acute      ] };
+    key <AB04> { [ NoSymbol, NoSymbol, ccedilla,        Ccedilla        ] };
+    key <AD04> { [ NoSymbol, NoSymbol, oe,              OE              ] };
+
+    // AltGr is a latch
+    key <RALT> { [ ISO_Level3_Latch ] };
 };
