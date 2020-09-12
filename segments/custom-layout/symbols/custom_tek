@@ -1,4 +1,4 @@
-xkb_symbols "custom" {
+xkb_symbols "custom_tek" {
 
     include "us(workman)"
     name[Group1] = "Programming (Personal)";
