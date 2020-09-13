@@ -3,30 +3,16 @@
 
   inputs =
     {
-      nur.url = github:nix-community/NUR;
-      nixos.url = "nixpkgs/nixos-20.03-small";
       nixpkgs.url = "nixpkgs/nixpkgs-unstable";
     };
 
-  outputs = inputs@{ self, nixos, nixpkgs, nur }:
+  outputs = inputs@{ self, nixpkgs }:
     let
       system = "x86_64-linux";
-
-      pkgImport = pkgs:
-        import pkgs {
-          inherit system;
-        };
-
-      pkgset = {
-        osPkgs = pkgImport nixos;
-        pkgs = pkgImport nixpkgs;
-      };
-
     in
-    with pkgset;
     {
       devShell."${system}" = import ./shell.nix {
-        inherit pkgs;
+        pkgs = nixpkgs.legacyPackages.${system};
       };
 
       nixosModules = {
