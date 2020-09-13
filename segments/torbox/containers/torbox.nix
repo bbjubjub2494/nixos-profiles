@@ -28,8 +28,6 @@ in
 
       services.sshd.enable = true;
 
-      nixpkgs.overlays = [ config.lib.overlays.patch-xpra ];
-
       networking.proxy = rec {
         default = torsocksUrl;
         httpProxy = privoxyUrl;

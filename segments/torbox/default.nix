@@ -6,11 +6,9 @@
   imports = [
     ./containers/torbox.nix
     ./containers/tor-gateway.nix
-    ./containers/vpn-gateway.nix
   ];
 
   environment.systemPackages = [ pkgs.xpra ];
-  nixpkgs.overlays = [ config.lib.overlays.patch-xpra ];
 
   containers.torbox.autoStart = true;
 }
