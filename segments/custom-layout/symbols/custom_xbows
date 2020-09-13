@@ -5,7 +5,7 @@ xkb_symbols "custom_xbows" {
 
     // symbols keys, loosely based on programmer dvorak.
     // Caps Lock can be used to type strings of digits.
-    key <LSGT> { [ numbersign,      grave       ] };
+    key <LFSH> { [ numbersign,      grave       ] };  // instead of missing LSGT
     key <AE11> { [ percent,         ampersand   ] };
     key <TLDE> { [ asciitilde,      dollar      ] };
     key <AE01> { [ exclam,          1           ], type[Group1] = "ALPHABETIC" };
@@ -25,8 +25,8 @@ xkb_symbols "custom_xbows" {
     key <AD10> { [ colon,           semicolon   ] };
     key <AC11> { [ quotedbl,        apostrophe  ] };
 
-    // AltGr is a latch
-    key <RALT> { [ ISO_Level3_Latch ] };
+    // Workman turns Caps Lock into backspace, undo
+    replace key <CAPS> { [ Caps_Lock ] };
 
     // Accents and special characters (FR/EN/DE)
     key <AC01> { [ NoSymbol, NoSymbol, dead_diaeresis,  dead_diaeresis  ] };
@@ -35,4 +35,7 @@ xkb_symbols "custom_xbows" {
     key <AC04> { [ NoSymbol, NoSymbol, dead_acute,      dead_acute      ] };
     key <AB04> { [ NoSymbol, NoSymbol, ccedilla,        Ccedilla        ] };
     key <AD04> { [ NoSymbol, NoSymbol, oe,              OE              ] };
+
+    // AltGr is a latch
+    key <RALT> { [ ISO_Level3_Latch ] };
 };
