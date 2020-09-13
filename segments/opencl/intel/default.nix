@@ -7,4 +7,8 @@
     beignet
     intel-compute-runtime
   ];
+
+  environment.systemPackages = with pkgs; [
+    ocl-icd  # for libOpenCL
+  ];
 }
