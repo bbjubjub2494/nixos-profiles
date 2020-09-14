@@ -5,7 +5,6 @@ xkb_symbols "custom_xbows" {
 
     // symbols keys, loosely based on programmer dvorak.
     // Caps Lock can be used to type strings of digits.
-    key <LFSH> { [ numbersign,      grave       ] };  // instead of missing LSGT
     key <AE11> { [ percent,         ampersand   ] };
     key <TLDE> { [ asciitilde,      dollar      ] };
     key <AE01> { [ exclam,          1           ], type[Group1] = "ALPHABETIC" };
@@ -20,7 +19,7 @@ xkb_symbols "custom_xbows" {
     key <AE10> { [ bracketright,    0           ], type[Group1] = "ALPHABETIC" };
     key <AE12> { [ minus,           underscore  ] };
     key <BKSL> { [ backslash,       bar         ] };
-    key <AD11> { [ slash,           question    ] };
+    key <AD11> { [ numbersign,      grave       ] };
     key <AD12> { [ at,              asciicircum ] };
     key <AD10> { [ colon,           semicolon   ] };
     key <AC11> { [ quotedbl,        apostrophe  ] };
