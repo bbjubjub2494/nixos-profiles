@@ -44,6 +44,7 @@
       segments/transmissiond
       segments/firewall
       segments/flakes
+      segments/podman
       segments/sshd
       segments/lxd
       segments/jdk
