@@ -20,6 +20,7 @@ in {
       "networkmanager"
       "lxd"
       "docker"
+      "vboxusers"
     ];
     openssh.authorizedKeys.keyFiles = [
       config.lib.data.lourkeur.keys.ssh.nitrokey

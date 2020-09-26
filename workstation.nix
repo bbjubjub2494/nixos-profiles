@@ -4,6 +4,7 @@
   imports = [
       # Dependencies
       segments/common
+      segments/allow-unfree
 
       # Boot-critical Segments
       segments/bootloader
@@ -28,6 +29,7 @@
       segments/gnupg
       segments/keybase
       segments/captive-browser
+      segments/virtualbox
       segments/wireshark
 
       # Desktop Environment

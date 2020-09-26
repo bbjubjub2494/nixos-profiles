@@ -5,5 +5,6 @@
     let pname = if pkg ? pname then pkg.pname else (builtins.parseDrvName pkg.name).name;
     in builtins.elem pname [
       # list names of tolerated unfree packages
+      "Oracle_VM_VirtualBox_Extension_Pack"
   ];
 }
