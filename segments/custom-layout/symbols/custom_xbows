@@ -23,6 +23,10 @@ xkb_symbols "custom_xbows" {
     key <AD10> { [ colon,           semicolon   ] };
     key <AC11> { [ quotedbl,        apostrophe  ] };
 
+    // Add layers for Tab and Escape on the central keys
+    key <BKSP> { [ BackSpace, Escape ] };
+    key <RTRN> { [ Return,    Tab    ] };
+
     // Workman turns Caps Lock into backspace, undo
     replace key <CAPS> { [ Caps_Lock ] };
 
